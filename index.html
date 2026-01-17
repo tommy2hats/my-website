@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RagStackAI - AI-Powered Solutions for Legal & Healthcare | Essex & London</title>
+    <title>RagStackAI - Instant Tech Specs for Trade Counters | Essex & London</title>
     <style>
         * {
             margin: 0;
@@ -14,7 +14,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: #1a1a1a;
             overflow-x: hidden;
         }
 
@@ -42,7 +42,7 @@
         .logo {
             font-size: 1.8rem;
             font-weight: 700;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -56,14 +56,14 @@
 
         .nav-links a {
             text-decoration: none;
-            color: #333;
-            font-weight: 500;
+            color: #1a1a1a;
+            font-weight: 600;
             transition: color 0.3s ease;
             position: relative;
         }
 
         .nav-links a:hover {
-            color: #2563eb;
+            color: #7c3aed;
         }
 
         .nav-links a::after {
@@ -72,8 +72,8 @@
             bottom: -5px;
             left: 0;
             width: 0;
-            height: 2px;
-            background: #2563eb;
+            height: 3px;
+            background: #7c3aed;
             transition: width 0.3s ease;
         }
 
@@ -82,16 +82,21 @@
         }
 
         .cta-btn {
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
             color: white !important;
             padding: 0.7rem 1.8rem;
-            border-radius: 25px;
+            border-radius: 8px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 700;
         }
 
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+        }
+
+        .cta-btn::after {
+            display: none;
         }
 
         .mobile-menu {
@@ -104,7 +109,7 @@
         .mobile-menu span {
             width: 25px;
             height: 3px;
-            background: #333;
+            background: #1a1a1a;
             transition: all 0.3s ease;
         }
 
@@ -113,7 +118,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
@@ -124,8 +129,15 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            background: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 50px,
+                    rgba(249, 115, 22, 0.03) 50px,
+                    rgba(249, 115, 22, 0.03) 51px
+                );
+            opacity: 0.5;
         }
 
         .hero-content {
@@ -133,26 +145,57 @@
             margin: 0 auto;
             padding: 2rem;
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
             align-items: center;
             position: relative;
             z-index: 1;
         }
 
         .hero-text h1 {
-            font-size: 3.5rem;
+            font-size: 3.8rem;
             color: white;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            line-height: 1.1;
             animation: fadeInUp 0.8s ease;
+            font-weight: 800;
+        }
+
+        .hero-text .highlight {
+            color: #a78bfa;
         }
 
         .hero-text p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 2rem;
             animation: fadeInUp 0.8s ease 0.2s both;
+            font-weight: 500;
+        }
+
+        .stat-bar {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #a78bfa;
+            display: block;
+        }
+
+        .stat-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
         }
 
         .hero-buttons {
@@ -162,52 +205,69 @@
         }
 
         .btn {
-            padding: 1rem 2.5rem;
-            border-radius: 30px;
+            padding: 1.2rem 2.8rem;
+            border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
             cursor: pointer;
             border: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background: white;
-            color: #2563eb;
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
         }
 
         .btn-secondary {
             background: transparent;
             color: white;
-            border: 2px solid white;
+            border: 3px solid #7c3aed;
         }
 
         .btn-secondary:hover {
-            background: white;
-            color: #2563eb;
+            background: #7c3aed;
+            color: white;
         }
 
-        .hero-image {
+        .hero-visual {
             animation: fadeInRight 0.8s ease 0.3s both;
         }
 
-        .floating-card {
+        .demo-box {
             background: white;
             padding: 2rem;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            animation: float 3s ease-in-out infinite;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        .demo-search {
+            background: #f3f4f6;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            font-family: monospace;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .demo-result {
+            background: #ede9fe;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .demo-result strong {
+            color: #5b21b6;
         }
 
         @keyframes fadeInUp {
@@ -232,192 +292,237 @@
             }
         }
 
-        /* Industry Section */
-        .industries {
+        /* Problem Section */
+        .problem {
             padding: 6rem 2rem;
-            background: white;
+            background: #7c3aed;
+            color: white;
+            position: relative;
+        }
+
+        .problem::before {
+            content: '⚠️';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.05;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
+            z-index: 1;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             margin-bottom: 1rem;
-            color: #333;
+            font-weight: 800;
         }
 
         .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 4rem;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.9;
         }
 
-        .industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .industry-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            cursor: pointer;
-            border: 2px solid transparent;
-        }
-
-        .industry-card:hover {
-            transform: translateY(-10px);
-            border-color: #2563eb;
-            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15);
-        }
-
-        .industry-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-        }
-
-        .industry-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-
-        .industry-card p {
-            color: #64748b;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-list {
-            list-style: none;
-            padding: 0;
-        }
-
-        .feature-list li {
-            padding: 0.5rem 0;
-            color: #475569;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .feature-list li::before {
-            content: '✓';
-            color: #2563eb;
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 6rem 2rem;
-            background: #f8f9fa;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(37, 99, 235, 0.2);
-        }
-
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-        }
-
-        .service-card p {
-            color: #666;
-            line-height: 1.8;
-        }
-
-        /* Benefits Section */
-        .benefits {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%);
-            color: white;
-        }
-
-        .benefits-grid {
+        .problem-stats {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .benefit-item {
-            text-align: center;
-            padding: 2rem;
+        .problem-stat {
             background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 12px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .problem-stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #e9d5ff;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .problem-stat-text {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: #f3f4f6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s ease;
+            border: 3px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #7c3aed;
+            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.2);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 800;
+        }
+
+        .feature-card p {
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-benefit {
+            background: #ede9fe;
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #7c3aed;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 800;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .step p {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        /* Industries Section */
+        .industries {
+            padding: 6rem 2rem;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .industry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .industry-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 2px solid rgba(124, 58, 237, 0.3);
             transition: all 0.3s ease;
         }
 
-        .benefit-item:hover {
-            background: rgba(255, 255, 255, 0.15);
+        .industry-card:hover {
+            background: rgba(124, 58, 237, 0.1);
+            border-color: #7c3aed;
             transform: translateY(-5px);
         }
 
-        .benefit-icon {
-            font-size: 3rem;
+        .industry-card h3 {
+            font-size: 1.8rem;
             margin-bottom: 1rem;
+            color: #a78bfa;
+            font-weight: 700;
         }
 
-        .benefit-item h3 {
+        .industry-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .industry-card li {
+            padding: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .industry-card li::before {
+            content: '✓';
+            color: #a78bfa;
+            font-weight: bold;
             font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .benefit-item p {
-            color: rgba(255, 255, 255, 0.9);
         }
 
         /* Locations Section */
         .locations {
             padding: 6rem 2rem;
-            background: white;
+            background: #f3f4f6;
         }
 
         .locations-grid {
@@ -428,34 +533,36 @@
         }
 
         .location-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid #e2e8f0;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 3px solid #e5e7eb;
             transition: all 0.3s ease;
         }
 
         .location-card:hover {
-            border-color: #2563eb;
+            border-color: #f97316;
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
         }
 
         .location-card h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: #1e293b;
+            color: #1a1a1a;
+            font-weight: 700;
         }
 
         .location-card p {
-            color: #64748b;
+            color: #4b5563;
             line-height: 1.8;
+            font-weight: 500;
         }
 
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
-            background: #f8f9fa;
+            background: white;
         }
 
         .contact-container {
@@ -467,10 +574,10 @@
             display: grid;
             gap: 1.5rem;
             margin-top: 3rem;
-            background: white;
+            background: #f3f4f6;
             padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            border: 3px solid #e5e7eb;
         }
 
         .form-group {
@@ -480,26 +587,30 @@
 
         .form-group label {
             margin-bottom: 0.5rem;
-            font-weight: 600;
-            color: #333;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
         }
 
         .form-group input,
         .form-group textarea,
         .form-group select {
             padding: 1rem;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            border: 2px solid #d1d5db;
+            border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
             font-family: inherit;
+            font-weight: 500;
         }
 
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #2563eb;
+            border-color: #f97316;
         }
 
         .form-group textarea {
@@ -509,7 +620,7 @@
 
         /* Footer */
         footer {
-            background: #0f172a;
+            background: #0a0a0a;
             color: white;
             padding: 3rem 2rem 1rem;
         }
@@ -525,27 +636,29 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #2563eb;
+            color: #f97316;
+            font-weight: 700;
         }
 
         .footer-section p,
         .footer-section a {
-            color: #cbd5e1;
+            color: #9ca3af;
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .footer-section a:hover {
-            color: #2563eb;
+            color: #f97316;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #334155;
-            color: #94a3b8;
+            border-top: 1px solid #1f2937;
+            color: #6b7280;
         }
 
         /* Responsive */
@@ -567,19 +680,27 @@
                 font-size: 2.5rem;
             }
 
+            .stat-bar {
+                justify-content: center;
+            }
+
             .hero-buttons {
                 flex-direction: column;
             }
 
+            .features-grid,
+            .steps,
             .industry-grid,
-            .services-grid,
-            .benefits-grid,
             .locations-grid {
                 grid-template-columns: 1fr;
             }
 
             .contact-form {
                 padding: 2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
             }
         }
     </style>
@@ -591,10 +712,10 @@
             <div class="logo">RagStackAI</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#problem">The Problem</a></li>
+                <li><a href="#features">Features</a></li>
                 <li><a href="#industries">Industries</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#locations">Locations</a></li>
-                <li><a href="#contact" class="cta-btn">Book Consultation</a></li>
+                <li><a href="#contact" class="cta-btn">Get Demo</a></li>
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -608,17 +729,129 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Enterprise RAG Systems for Legal & Healthcare</h1>
-                <p>Secure, compliant AI-powered document intelligence for law firms and healthcare providers across Essex and London.</p>
+                <h1>Stop Digging Through <span class="highlight">500-Page Manuals</span></h1>
+                <p>Find any technical spec in under 3 seconds. Built for UK trade counters that need answers NOW.</p>
+                
+                <div class="stat-bar">
+                    <div class="stat">
+                        <span class="stat-number">3sec</span>
+                        <span class="stat-label">Average Search</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">30%</span>
+                        <span class="stat-label">Time Saved</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">UK Hosted</span>
+                    </div>
+                </div>
+
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Schedule Demo</a>
-                    <a href="#industries" class="btn btn-secondary">Learn More</a>
+                    <a href="#contact" class="btn btn-primary">Book Free Demo</a>
+                    <a href="#features" class="btn btn-secondary">See How It Works</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="floating-card">
-                    <h3 style="color: #2563eb; margin-bottom: 1rem;">⚖️ Compliant & Secure</h3>
-                    <p style="color: #666;">GDPR, HIPAA, and SRA compliant RAG systems built specifically for regulated industries</p>
+            <div class="hero-visual">
+                <div class="demo-box">
+                    <div class="demo-search">🔍 "voltage rating grundfos CR pump 1992"</div>
+                    <div class="demo-result">
+                        <strong>Found in 2.3 seconds:</strong><br>
+                        Grundfos CR 5-8 (1992)<br>
+                        Voltage: 230V, 50Hz<br>
+                        Replaced by: CR 5-9 (In Stock)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem" id="problem">
+        <div class="container">
+            <h2 class="section-title">The Real Cost of Manual Searches</h2>
+            <p class="section-subtitle">Your sales reps are wasting hours every single day hunting for specs</p>
+            
+            <div class="problem-stats">
+                <div class="problem-stat">
+                    <span class="problem-stat-number">30%</span>
+                    <span class="problem-stat-text">of each day spent searching PDFs instead of selling</span>
+                </div>
+                <div class="problem-stat">
+                    <span class="problem-stat-number">500+</span>
+                    <span class="problem-stat-text">page manuals to search through manually</span>
+                </div>
+                <div class="problem-stat">
+                    <span class="problem-stat-number">£1000s</span>
+                    <span class="problem-stat-text">lost in sales velocity every week</span>
+                </div>
+                <div class="problem-stat">
+                    <span class="problem-stat-number">Obsolete</span>
+                    <span class="problem-stat-text">parts from the 90s? Good luck finding those specs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Three Features That Change Everything</h2>
+            <p class="section-subtitle">No fluff. Just tools that make your counter faster.</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>The Time Machine</h3>
+                    <p>Customer needs specs for a discontinued 1990s pump? No problem. Our AI instantly finds technical data from your archived catalogs—parts that haven't been in production for 20+ years.</p>
+                    <div class="feature-benefit">
+                        💰 Result: Turn "Sorry, can't help" into "Here's the replacement"
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Smart Cross-Reference</h3>
+                    <p>Automatically matches old part numbers to current in-stock replacements. When a customer asks for a discontinued SKU, instantly show them what they actually need to buy TODAY.</p>
+                    <div class="feature-benefit">
+                        💰 Result: Convert every obsolete inquiry into an immediate sale
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Data Sovereignty</h3>
+                    <p>All your catalogs, pricing, and proprietary data stays on UK/EU servers. GDPR compliant from day one. Your competitors never see your data. No American cloud nonsense.</p>
+                    <div class="feature-benefit">
+                        💰 Result: Sleep easy knowing your business data is secure
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Dead Simple Setup</h2>
+            <p class="section-subtitle">We handle the heavy lifting. You start selling faster.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Send Us Your PDFs</h3>
+                    <p>Email us your old catalogs, manuals, and spec sheets. All formats accepted.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>We Build Your Search</h3>
+                    <p>Our AI ingests everything in 48 hours. Secure, private, UK-hosted.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Start Searching</h3>
+                    <p>Simple chat interface. Type any question. Get instant answers with sources.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Sell More, Faster</h3>
+                    <p>3-second searches instead of 30-minute PDF hunts. Watch sales velocity soar.</p>
                 </div>
             </div>
         </div>
@@ -627,104 +860,35 @@
     <!-- Industries Section -->
     <section class="industries" id="industries">
         <div class="container">
-            <h2 class="section-title">Specialized Solutions</h2>
-            <p class="section-subtitle">Industry-specific RAG systems designed for your unique needs</p>
+            <h2 class="section-title">Built for Trade Counters</h2>
+            <p class="section-subtitle">Serving the backbone of UK industry across Essex and London</p>
             <div class="industry-grid">
                 <div class="industry-card">
-                    <div class="industry-icon">⚖️</div>
-                    <h3>Legal Firms</h3>
-                    <p>Transform your legal practice with AI-powered case research, contract analysis, and precedent discovery. Our RAG system understands legal terminology and context.</p>
-                    <ul class="feature-list">
-                        <li>Case law research & analysis</li>
-                        <li>Contract review automation</li>
-                        <li>Precedent discovery</li>
-                        <li>Legal document summarization</li>
-                        <li>Client matter search</li>
-                        <li>SRA compliance built-in</li>
+                    <h3>⚡ Electrical Wholesalers</h3>
+                    <ul>
+                        <li>Cable specs & ratings instantly</li>
+                        <li>Breaker compatibility checks</li>
+                        <li>Legacy lighting cross-reference</li>
+                        <li>BS/EN standard lookups</li>
                     </ul>
                 </div>
                 <div class="industry-card">
-                    <div class="industry-icon">🏥</div>
-                    <h3>Healthcare Providers</h3>
-                    <p>Enhance patient care with secure medical record search, clinical decision support, and research insights. HIPAA compliant and NHS-integrated.</p>
-                    <ul class="feature-list">
-                        <li>Patient record intelligence</li>
-                        <li>Clinical decision support</li>
-                        <li>Medical research insights</li>
-                        <li>Drug interaction checks</li>
-                        <li>Treatment protocol search</li>
-                        <li>HIPAA & GDPR compliant</li>
+                    <h3>🏭 Industrial Distributors</h3>
+                    <ul>
+                        <li>Motor specifications & replacements</li>
+                        <li>Bearing cross-references</li>
+                        <li>Hydraulic component specs</li>
+                        <li>Obsolete machinery parts</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Comprehensive RAG Solutions</h2>
-            <p class="section-subtitle">End-to-end implementation and support for your organization</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔍</div>
-                    <h3>Intelligent Search</h3>
-                    <p>Semantic search across all documents with context-aware results. Find exact clauses, similar cases, or relevant medical research in seconds.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📚</div>
-                    <h3>Document Analysis</h3>
-                    <p>Extract insights from legal briefs, medical records, contracts, and research papers with AI-powered understanding.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>Custom AI Assistants</h3>
-                    <p>Build specialized chatbots trained on your firm's knowledge base for instant answers to complex queries.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔐</div>
-                    <h3>Enterprise Security</h3>
-                    <p>Bank-grade encryption, role-based access control, and full audit trails. Your data never leaves your control.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>System Integration</h3>
-                    <p>Seamless integration with case management systems, EHR platforms, and existing workflows.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Analytics Dashboard</h3>
-                    <p>Track usage, measure efficiency gains, and identify knowledge gaps with comprehensive analytics.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Benefits Section -->
-    <section class="benefits">
-        <div class="container">
-            <h2 class="section-title">Why RagStackAI?</h2>
-            <p class="section-subtitle">Built for the unique demands of legal and healthcare sectors</p>
-            <div class="benefits-grid">
-                <div class="benefit-item">
-                    <div class="benefit-icon">🔒</div>
-                    <h3>Regulatory Compliance</h3>
-                    <p>GDPR, HIPAA, SRA, and ICO compliant out of the box</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">⚡</div>
-                    <h3>99.9% Accuracy</h3>
-                    <p>Precision results with source citation and confidence scoring</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">🎯</div>
-                    <h3>Domain Expertise</h3>
-                    <p>Trained on legal and medical terminology and context</p>
-                </div>
-                <div class="benefit-item">
-                    <div class="benefit-icon">💼</div>
-                    <h3>Local Support</h3>
-                    <p>Dedicated UK-based team with industry experience</p>
+                <div class="industry-card">
+                    <h3>❄️ HVAC Suppliers</h3>
+                    <ul>
+                        <li>Pump voltage & flow rates</li>
+                        <li>Boiler part numbers</li>
+                        <li>Refrigerant compatibility</li>
+                        <li>Discontinued system components</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -733,20 +897,20 @@
     <!-- Locations Section -->
     <section class="locations" id="locations">
         <div class="container">
-            <h2 class="section-title">Serving Essex & London</h2>
-            <p class="section-subtitle">On-site implementation and local support for law firms and healthcare providers</p>
+            <h2 class="section-title">Local Service, UK Data</h2>
+            <p class="section-subtitle">On-site setup available across Essex and London</p>
             <div class="locations-grid">
                 <div class="location-card">
-                    <h3>📍 Essex</h3>
-                    <p>Serving legal practices and healthcare facilities across Chelmsford, Colchester, Basildon, Harlow, Southend-on-Sea, Brentwood, and surrounding areas. On-site consultations and implementation available.</p>
+                    <h3>📍 Essex Coverage</h3>
+                    <p><strong>Serving:</strong> Chelmsford, Colchester, Basildon, Harlow, Southend-on-Sea, Braintree, Brentwood, and all surrounding industrial estates. On-site training included.</p>
                 </div>
                 <div class="location-card">
-                    <h3>📍 London</h3>
-                    <p>Full coverage across Greater London including City law firms, private clinics, NHS trusts, and medical practices in all boroughs. Same-day emergency support for enterprise clients.</p>
+                    <h3>📍 London Coverage</h3>
+                    <p><strong>Serving:</strong> Greater London, Park Royal, Enfield, Croydon industrial areas. Same-day support for enterprise accounts. We speak your language—no corporate waffle.</p>
                 </div>
                 <div class="location-card">
-                    <h3>🌐 Secure Remote Access</h3>
-                    <p>Cloud-based RAG systems with military-grade encryption. Access your intelligent document system securely from anywhere while maintaining full regulatory compliance.</p>
+                    <h3>🇬🇧 UK Data Hosting</h3>
+                    <p><strong>Your data never leaves the UK.</strong> Processed on UK/EU servers. GDPR compliant. No American cloud services. Your competitors can't see your catalogs or pricing.</p>
                 </div>
             </div>
         </div>
@@ -755,117 +919,13 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="contact-container">
-            <h2 class="section-title">Book Your Free Consultation</h2>
-            <p class="section-subtitle">Discover how RagStackAI can transform your practice</p>
+            <h2 class="section-title">See It In Action</h2>
+            <p class="section-subtitle">15-minute demo with your actual catalogs. No sales pitch.</p>
             <form class="contact-form" onsubmit="handleSubmit(event)">
                 <div class="form-group">
-                    <label for="name">Full Name *</label>
+                    <label for="name">Your Name *</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="organization">Organization/Firm Name *</label>
-                    <input type="text" id="organization" name="organization" required>
-                </div>
-                <div class="form-group">
-                    <label for="industry">Industry *</label>
-                    <select id="industry" name="industry" required>
-                        <option value="">Select your industry</option>
-                        <option value="legal">Legal / Law Firm</option>
-                        <option value="healthcare">Healthcare / Medical Practice</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Tell us about your needs *</label>
-                    <textarea id="message" name="message" placeholder="What challenges are you facing with document management and search?" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; cursor: pointer;">Request Consultation</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>RagStackAI</h3>
-                <p>Secure, compliant RAG systems for legal and healthcare professionals across Essex and London.</p>
-                <p style="margin-top: 1rem;">🔒 GDPR & HIPAA Compliant<br>⚖️ SRA Approved Solutions</p>
-            </div>
-            <div class="footer-section">
-                <h3>Industries</h3>
-                <a href="#industries">Legal Firms</a>
-                <a href="#industries">Healthcare Providers</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Book Demo</a>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>📧 hello@ragstackai.co.uk</p>
-                <p>📞 +44 20 3987 6543</p>
-                <p>📍 Essex & London</p>
-                <p>🔐 Secure Contact Form Available</p>
-            </div>
-            <div class="footer-section">
-                <h3>Business Hours</h3>
-                <p>Monday - Friday: 8am - 7pm</p>
-                <p>Saturday: 10am - 4pm</p>
-                <p>Sunday: Closed</p>
-                <p style="margin-top: 1rem;">24/7 Emergency Support for Enterprise Clients</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 RagStackAI. All rights reserved. | Privacy Policy | Terms of Service | GDPR Compliance Statement</p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // Form submission
-        function handleSubmit(e) {
-            e.preventDefault();
-            const industry = document.getElementById('industry').value;
-            const industryText = industry === 'legal' ? 'legal' : industry === 'healthcare' ? 'healthcare' : 'your';
-            alert(`Thank you for your interest in RagStackAI! Our ${industryText} specialists will contact you within 24 hours to discuss your specific needs.`);
-            e.target.reset();
-        }
-
-        // Header scroll effect
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
-            } else {
-                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-            }
-            
-            lastScroll = currentScroll;
-        });
-
-        // Mobile menu toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const navLinks = document.querySelector('.nav-links');
-        
-        mobileMenu.addEventListener('click', () => {
-            navLinks.style.display = navLinks.
+                    <label for="email">Email *</label>
+                    <input type="email" id="email
