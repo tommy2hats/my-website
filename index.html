@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RagStackAI - Instant Tech Specs for Trade Counters | Essex & London</title>
+    <title>RagStackAI - Stop Reading Manuals. Start Finding Answers.</title>
     <style>
         * {
             margin: 0;
@@ -18,7 +18,7 @@
             overflow-x: hidden;
         }
 
-        /* Header & Navigation */
+        /* Header */
         header {
             position: fixed;
             width: 100%;
@@ -27,7 +27,6 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
 
         nav {
@@ -52,6 +51,7 @@
             display: flex;
             gap: 2rem;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -59,26 +59,10 @@
             color: #1a1a1a;
             font-weight: 600;
             transition: color 0.3s ease;
-            position: relative;
         }
 
         .nav-links a:hover {
             color: #7c3aed;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: #7c3aed;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
         }
 
         .cta-btn {
@@ -95,10 +79,6 @@
             box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
         }
 
-        .cta-btn::after {
-            display: none;
-        }
-
         .mobile-menu {
             display: none;
             flex-direction: column;
@@ -110,7 +90,6 @@
             width: 25px;
             height: 3px;
             background: #1a1a1a;
-            transition: all 0.3s ease;
         }
 
         /* Hero Section */
@@ -118,7 +97,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             position: relative;
             overflow: hidden;
             padding-top: 80px;
@@ -129,78 +108,51 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
-                    transparent,
-                    transparent 50px,
-                    rgba(249, 115, 22, 0.03) 50px,
-                    rgba(249, 115, 22, 0.03) 51px
-                );
-            opacity: 0.5;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 50px,
+                rgba(124, 58, 237, 0.03) 50px,
+                rgba(124, 58, 237, 0.03) 51px
+            );
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            text-align: center;
             position: relative;
             z-index: 1;
         }
 
-        .hero-text h1 {
-            font-size: 3.8rem;
+        .hero h1 {
+            font-size: 4.5rem;
             color: white;
             margin-bottom: 1.5rem;
             line-height: 1.1;
+            font-weight: 800;
             animation: fadeInUp 0.8s ease;
-            font-weight: 800;
         }
 
-        .hero-text .highlight {
+        .hero h1 .highlight {
             color: #a78bfa;
         }
 
-        .hero-text p {
-            font-size: 1.4rem;
+        .hero p {
+            font-size: 1.5rem;
             color: rgba(255, 255, 255, 0.85);
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
             animation: fadeInUp 0.8s ease 0.2s both;
-            font-weight: 500;
-        }
-
-        .stat-bar {
-            display: flex;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease 0.3s both;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #a78bfa;
-            display: block;
-        }
-
-        .stat-label {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
         }
 
         .hero-buttons {
             display: flex;
             gap: 1rem;
+            justify-content: center;
             animation: fadeInUp 0.8s ease 0.4s both;
         }
 
@@ -238,38 +190,6 @@
             color: white;
         }
 
-        .hero-visual {
-            animation: fadeInRight 0.8s ease 0.3s both;
-        }
-
-        .demo-box {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-        }
-
-        .demo-search {
-            background: #f3f4f6;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            font-family: monospace;
-            color: #1a1a1a;
-            font-weight: 600;
-        }
-
-        .demo-result {
-            background: #ede9fe;
-            padding: 1rem;
-            border-radius: 8px;
-            border-left: 4px solid #7c3aed;
-        }
-
-        .demo-result strong {
-            color: #5b21b6;
-        }
-
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -281,143 +201,190 @@
             }
         }
 
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
         /* Problem Section */
         .problem {
             padding: 6rem 2rem;
-            background: #7c3aed;
-            color: white;
-            position: relative;
-        }
-
-        .problem::before {
-            content: '⚠️';
-            position: absolute;
-            font-size: 15rem;
-            opacity: 0.05;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            background: white;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
         .section-title {
             font-size: 3rem;
             margin-bottom: 1rem;
             font-weight: 800;
+            text-align: center;
         }
 
         .section-subtitle {
             font-size: 1.3rem;
             margin-bottom: 3rem;
-            opacity: 0.9;
+            text-align: center;
+            color: #4b5563;
         }
 
-        .problem-stats {
+        .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .problem-stat {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 2rem;
+        .problem-card {
+            background: #f9fafb;
+            padding: 2.5rem;
             border-radius: 12px;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
+            border-left: 5px solid #7c3aed;
         }
 
-        .problem-stat-number {
-            font-size: 3.5rem;
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            color: #4b5563;
+            line-height: 1.8;
+        }
+
+        .problem-stat {
+            font-size: 2.5rem;
             font-weight: 800;
-            color: #e9d5ff;
+            color: #7c3aed;
             display: block;
             margin-bottom: 0.5rem;
         }
 
-        .problem-stat-text {
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        /* Features Section */
-        .features {
+        /* Industry Switcher */
+        .industries {
             padding: 6rem 2rem;
-            background: #f3f4f6;
+            background: #f9fafb;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .feature-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            transition: all 0.4s ease;
-            border: 3px solid transparent;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-            border-color: #7c3aed;
-            box-shadow: 0 20px 60px rgba(124, 58, 237, 0.2);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
-            border-radius: 12px;
+        .industry-tabs {
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
         }
 
-        .feature-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+        .industry-tab {
+            padding: 1rem 2rem;
+            background: white;
+            border: 3px solid #e5e7eb;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .industry-tab:hover {
+            border-color: #a78bfa;
+        }
+
+        .industry-tab.active {
+            background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%);
+            color: white;
+            border-color: #7c3aed;
+        }
+
+        .industry-content {
+            display: none;
+            animation: fadeInUp 0.5s ease;
+        }
+
+        .industry-content.active {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .industry-text h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
             color: #1a1a1a;
             font-weight: 800;
         }
 
-        .feature-card p {
+        .industry-text p {
+            font-size: 1.2rem;
             color: #4b5563;
+            margin-bottom: 2rem;
             line-height: 1.8;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
         }
 
-        .feature-benefit {
+        .industry-features {
+            list-style: none;
+        }
+
+        .industry-features li {
+            padding: 1rem 0;
+            color: #1a1a1a;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .industry-features li::before {
+            content: '✓';
+            color: #7c3aed;
+            font-weight: bold;
+            font-size: 1.5rem;
+            width: 30px;
+            height: 30px;
             background: #ede9fe;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .industry-visual {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-demo {
+            background: #f3f4f6;
             padding: 1rem;
             border-radius: 8px;
-            border-left: 4px solid #7c3aed;
-            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: monospace;
             color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .result-demo {
+            background: #ede9fe;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .result-demo strong {
+            color: #5b21b6;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-demo .source {
+            font-size: 0.9rem;
+            color: #7c3aed;
+            margin-top: 0.5rem;
+            font-style: italic;
         }
 
         /* How It Works */
@@ -428,8 +395,8 @@
 
         .steps {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
             margin-top: 3rem;
         }
 
@@ -453,7 +420,7 @@
         }
 
         .step h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
             color: #1a1a1a;
             font-weight: 700;
@@ -462,23 +429,29 @@
         .step p {
             color: #4b5563;
             line-height: 1.8;
+            font-size: 1.1rem;
         }
 
-        /* Industries Section */
-        .industries {
+        .step-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Trust Section */
+        .trust {
             padding: 6rem 2rem;
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
             color: white;
         }
 
-        .industry-grid {
+        .trust-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .industry-card {
+        .trust-card {
             background: rgba(255, 255, 255, 0.05);
             padding: 2.5rem;
             border-radius: 12px;
@@ -486,136 +459,56 @@
             transition: all 0.3s ease;
         }
 
-        .industry-card:hover {
+        .trust-card:hover {
             background: rgba(124, 58, 237, 0.1);
             border-color: #7c3aed;
             transform: translateY(-5px);
         }
 
-        .industry-card h3 {
-            font-size: 1.8rem;
+        .trust-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .trust-card h3 {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             color: #a78bfa;
             font-weight: 700;
         }
 
-        .industry-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .industry-card li {
-            padding: 0.5rem 0;
+        .trust-card p {
             color: rgba(255, 255, 255, 0.8);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .industry-card li::before {
-            content: '✓';
-            color: #a78bfa;
-            font-weight: bold;
-            font-size: 1.3rem;
-        }
-
-        /* Locations Section */
-        .locations {
-            padding: 6rem 2rem;
-            background: #f3f4f6;
-        }
-
-        .locations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .location-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 12px;
-            border: 3px solid #e5e7eb;
-            transition: all 0.3s ease;
-        }
-
-        .location-card:hover {
-            border-color: #f97316;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15);
-        }
-
-        .location-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #1a1a1a;
-            font-weight: 700;
-        }
-
-        .location-card p {
-            color: #4b5563;
             line-height: 1.8;
-            font-weight: 500;
         }
 
-        /* Contact Section */
-        .contact {
+        /* CTA Section */
+        .cta-section {
             padding: 6rem 2rem;
+            background: #7c3aed;
+            color: white;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-section .btn-primary {
             background: white;
+            color: #7c3aed;
         }
 
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .contact-form {
-            display: grid;
-            gap: 1.5rem;
-            margin-top: 3rem;
+        .cta-section .btn-primary:hover {
             background: #f3f4f6;
-            padding: 3rem;
-            border-radius: 12px;
-            border: 3px solid #e5e7eb;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-            color: #1a1a1a;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-        }
-
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            padding: 1rem;
-            border: 2px solid #d1d5db;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-            font-family: inherit;
-            font-weight: 500;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #f97316;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
         }
 
         /* Footer */
@@ -636,7 +529,7 @@
 
         .footer-section h3 {
             margin-bottom: 1rem;
-            color: #f97316;
+            color: #a78bfa;
             font-weight: 700;
         }
 
@@ -647,11 +540,10 @@
             display: block;
             margin-bottom: 0.5rem;
             transition: color 0.3s ease;
-            font-weight: 500;
         }
 
         .footer-section a:hover {
-            color: #f97316;
+            color: #a78bfa;
         }
 
         .footer-bottom {
@@ -671,36 +563,32 @@
                 display: flex;
             }
 
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
+            .hero h1 {
                 font-size: 2.5rem;
             }
 
-            .stat-bar {
-                justify-content: center;
+            .hero p {
+                font-size: 1.2rem;
             }
 
             .hero-buttons {
                 flex-direction: column;
             }
 
-            .features-grid,
-            .steps,
-            .industry-grid,
-            .locations-grid {
+            .industry-content.active {
                 grid-template-columns: 1fr;
             }
 
-            .contact-form {
-                padding: 2rem;
+            .industry-tabs {
+                flex-direction: column;
             }
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -711,11 +599,10 @@
         <nav>
             <div class="logo">RagStackAI</div>
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#problem">The Problem</a></li>
-                <li><a href="#features">Features</a></li>
                 <li><a href="#industries">Industries</a></li>
-                <li><a href="#contact" class="cta-btn">Get Demo</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#security">Security</a></li>
+                <li><a href="#cta" class="cta-btn">Try the Demo</a></li>
             </ul>
             <div class="mobile-menu">
                 <span></span>
@@ -726,101 +613,126 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>Stop Digging Through <span class="highlight">500-Page Manuals</span></h1>
-                <p>Find any technical spec in under 3 seconds. Built for UK trade counters that need answers NOW.</p>
-                
-                <div class="stat-bar">
-                    <div class="stat">
-                        <span class="stat-number">3sec</span>
-                        <span class="stat-label">Average Search</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">30%</span>
-                        <span class="stat-label">Time Saved</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">UK Hosted</span>
-                    </div>
-                </div>
-
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Book Free Demo</a>
-                    <a href="#features" class="btn btn-secondary">See How It Works</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="demo-box">
-                    <div class="demo-search">🔍 "voltage rating grundfos CR pump 1992"</div>
-                    <div class="demo-result">
-                        <strong>Found in 2.3 seconds:</strong><br>
-                        Grundfos CR 5-8 (1992)<br>
-                        Voltage: 230V, 50Hz<br>
-                        Replaced by: CR 5-9 (In Stock)
-                    </div>
-                </div>
+            <h1>Stop Reading Manuals. <span class="highlight">Start Finding Answers.</span></h1>
+            <p>The secure search engine for your company's internal documents. Upload your archive, ask a question, and get the exact page you need in seconds.</p>
+            <div class="hero-buttons">
+                <a href="#cta" class="btn btn-primary">Try the Demo</a>
+                <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
             </div>
         </div>
     </section>
 
     <!-- Problem Section -->
-    <section class="problem" id="problem">
+    <section class="problem">
         <div class="container">
-            <h2 class="section-title">The Real Cost of Manual Searches</h2>
-            <p class="section-subtitle">Your sales reps are wasting hours every single day hunting for specs</p>
+            <h2 class="section-title">The Hidden Cost of Manual Search</h2>
+            <p class="section-subtitle">Every minute spent searching is a minute not spent doing the work</p>
             
-            <div class="problem-stats">
-                <div class="problem-stat">
-                    <span class="problem-stat-number">30%</span>
-                    <span class="problem-stat-text">of each day spent searching PDFs instead of selling</span>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <span class="problem-stat">Ctrl+F</span>
+                    <h3>Doesn't Work on Scanned Documents</h3>
+                    <p>Your archive of 1990s manuals? Scanned PDFs with no text layer. Completely unsearchable. Your team is forced to read every page manually.</p>
                 </div>
-                <div class="problem-stat">
-                    <span class="problem-stat-number">500+</span>
-                    <span class="problem-stat-text">page manuals to search through manually</span>
+                <div class="problem-card">
+                    <span class="problem-stat">4hrs/week</span>
+                    <h3>Wasted on Document Hunting</h3>
+                    <p>Each employee spends hours every week digging through folders, asking colleagues, and searching file shares for the information they need to do their job.</p>
                 </div>
-                <div class="problem-stat">
-                    <span class="problem-stat-number">£1000s</span>
-                    <span class="problem-stat-text">lost in sales velocity every week</span>
-                </div>
-                <div class="problem-stat">
-                    <span class="problem-stat-number">Obsolete</span>
-                    <span class="problem-stat-text">parts from the 90s? Good luck finding those specs</span>
+                <div class="problem-card">
+                    <span class="problem-stat">£1000s</span>
+                    <h3>Lost in Labor Costs</h3>
+                    <p>When your technician spends 30 minutes finding a torque spec instead of 30 seconds, that's not productivity—that's waste. Multiply that across your team.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
+    <!-- Industry Switcher -->
+    <section class="industries" id="industries">
         <div class="container">
-            <h2 class="section-title">Three Features That Change Everything</h2>
-            <p class="section-subtitle">No fluff. Just tools that make your counter faster.</p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">⏰</div>
-                    <h3>The Time Machine</h3>
-                    <p>Customer needs specs for a discontinued 1990s pump? No problem. Our AI instantly finds technical data from your archived catalogs—parts that haven't been in production for 20+ years.</p>
-                    <div class="feature-benefit">
-                        💰 Result: Turn "Sorry, can't help" into "Here's the replacement"
+            <h2 class="section-title">Built for Your Industry</h2>
+            <p class="section-subtitle">One tool. Three critical use cases.</p>
+            
+            <div class="industry-tabs">
+                <div class="industry-tab active" onclick="switchIndustry('maintenance')">
+                    Maintenance & Repair
+                </div>
+                <div class="industry-tab" onclick="switchIndustry('compliance')">
+                    Compliance & Legal
+                </div>
+                <div class="industry-tab" onclick="switchIndustry('public')">
+                    Public Records
+                </div>
+            </div>
+
+            <!-- Maintenance Content -->
+            <div class="industry-content active" id="maintenance">
+                <div class="industry-text">
+                    <h3>Find Technical Specs in Seconds</h3>
+                    <p>Stop flipping through 500-page equipment manuals. Ask for the torque spec, wiring diagram, or error code—and get the exact page instantly.</p>
+                    <ul class="industry-features">
+                        <li>Torque specifications for any bolt or connection</li>
+                        <li>Wiring diagrams from archived manuals</li>
+                        <li>Error code definitions and troubleshooting steps</li>
+                        <li>Parts compatibility across equipment generations</li>
+                        <li>Maintenance schedules and service intervals</li>
+                    </ul>
+                </div>
+                <div class="industry-visual">
+                    <div class="search-demo">🔍 "What is the torque spec for the main bearing cap on a 1995 Grundfos CR5-8 pump?"</div>
+                    <div class="result-demo">
+                        <strong>Answer:</strong>
+                        The main bearing cap torque specification is 45 Nm (33 lb-ft) for the Grundfos CR5-8 pump manufactured between 1992-1998.
+                        <div class="source">📄 Source: Service Manual CR5 Series, Page 47 (1995 Edition)</div>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-                    <h3>Smart Cross-Reference</h3>
-                    <p>Automatically matches old part numbers to current in-stock replacements. When a customer asks for a discontinued SKU, instantly show them what they actually need to buy TODAY.</p>
-                    <div class="feature-benefit">
-                        💰 Result: Convert every obsolete inquiry into an immediate sale
+            </div>
+
+            <!-- Compliance Content -->
+            <div class="industry-content" id="compliance">
+                <div class="industry-text">
+                    <h3>Check Clauses Without Reading Contracts</h3>
+                    <p>Need to verify a specific clause in a 200-page contract? Or check if your safety manual covers a new regulation? Get precise answers with source citations.</p>
+                    <ul class="industry-features">
+                        <li>Contract clause verification in seconds</li>
+                        <li>Safety regulation compliance checks</li>
+                        <li>Policy cross-referencing across documents</li>
+                        <li>Historical agreement comparisons</li>
+                        <li>Audit trail documentation with citations</li>
+                    </ul>
+                </div>
+                <div class="industry-visual">
+                    <div class="search-demo">🔍 "Does our waste disposal contract include provisions for electronic waste?"</div>
+                    <div class="result-demo">
+                        <strong>Answer:</strong>
+                        Yes. Section 4.7 of the Waste Management Agreement includes electronic waste (e-waste) under "Specialized Material Handling" with separate collection requirements and disposal fees.
+                        <div class="source">📄 Source: Waste Management Services Agreement 2023, Section 4.7, Page 18</div>
                     </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔐</div>
-                    <h3>Data Sovereignty</h3>
-                    <p>All your catalogs, pricing, and proprietary data stays on UK/EU servers. GDPR compliant from day one. Your competitors never see your data. No American cloud nonsense.</p>
-                    <div class="feature-benefit">
-                        💰 Result: Sleep easy knowing your business data is secure
+            </div>
+
+            <!-- Public Records Content -->
+            <div class="industry-content" id="public">
+                <div class="industry-text">
+                    <h3>Search Years of Meeting Minutes</h3>
+                    <p>Find what was discussed in any council meeting from the past decade. Track voting records, policy decisions, and historical context without reading thousands of pages.</p>
+                    <ul class="industry-features">
+                        <li>Meeting minute summaries by topic</li>
+                        <li>Historical voting record lookups</li>
+                        <li>Policy decision tracking over time</li>
+                        <li>Constituent request history</li>
+                        <li>Budget allocation searches across years</li>
+                    </ul>
+                </div>
+                <div class="industry-visual">
+                    <div class="search-demo">🔍 "When did the council vote on the parking policy for Mill Street and what was the outcome?"</div>
+                    <div class="result-demo">
+                        <strong>Answer:</strong>
+                        The council voted on Mill Street parking restrictions on March 15, 2022. The motion passed 7-3 to implement 2-hour parking limits on weekdays. Councillors Johnson, Smith, and Davies voted against.
+                        <div class="source">📄 Source: Council Meeting Minutes, March 15 2022, Item 7.3, Page 12</div>
                     </div>
                 </div>
             </div>
@@ -828,104 +740,136 @@
     </section>
 
     <!-- How It Works -->
-    <section class="how-it-works">
+    <section class="how-it-works" id="how-it-works">
         <div class="container">
-            <h2 class="section-title">Dead Simple Setup</h2>
-            <p class="section-subtitle">We handle the heavy lifting. You start selling faster.</p>
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to transform your document chaos into organized knowledge</p>
+            
             <div class="steps">
                 <div class="step">
+                    <div class="step-icon">📤</div>
                     <div class="step-number">1</div>
-                    <h3>Send Us Your PDFs</h3>
-                    <p>Email us your old catalogs, manuals, and spec sheets. All formats accepted.</p>
+                    <h3>Upload Your Documents</h3>
+                    <p>Drag and drop your PDFs, Word docs, scanned manuals, or contracts. We handle OCR for scanned documents automatically. No formatting required.</p>
                 </div>
                 <div class="step">
+                    <div class="step-icon">💬</div>
                     <div class="step-number">2</div>
-                    <h3>We Build Your Search</h3>
-                    <p>Our AI ingests everything in 48 hours. Secure, private, UK-hosted.</p>
+                    <h3>Ask Questions in Plain English</h3>
+                    <p>Type your question like you're asking a colleague. No special syntax. No keywords. Just ask what you need to know.</p>
                 </div>
                 <div class="step">
+                    <div class="step-icon">✅</div>
                     <div class="step-number">3</div>
-                    <h3>Start Searching</h3>
-                    <p>Simple chat interface. Type any question. Get instant answers with sources.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Sell More, Faster</h3>
-                    <p>3-second searches instead of 30-minute PDF hunts. Watch sales velocity soar.</p>
+                    <h3>Get Cited Answers</h3>
+                    <p>Receive accurate answers with direct links to the source pages. Every answer is verifiable. Click through to see the original document.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Industries Section -->
-    <section class="industries" id="industries">
+    <!-- Trust/Privacy Section -->
+    <section class="trust" id="security">
         <div class="container">
-            <h2 class="section-title">Built for Trade Counters</h2>
-            <p class="section-subtitle">Serving the backbone of UK industry across Essex and London</p>
-            <div class="industry-grid">
-                <div class="industry-card">
-                    <h3>⚡ Electrical Wholesalers</h3>
-                    <ul>
-                        <li>Cable specs & ratings instantly</li>
-                        <li>Breaker compatibility checks</li>
-                        <li>Legacy lighting cross-reference</li>
-                        <li>BS/EN standard lookups</li>
-                    </ul>
+            <h2 class="section-title" style="color: white;">Your Data Stays Yours</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.8);">Enterprise-grade security built for serious businesses</p>
+            
+            <div class="trust-grid">
+                <div class="trust-card">
+                    <div class="trust-icon">🔒</div>
+                    <h3>Private & Isolated</h3>
+                    <p>Your documents are stored in your own dedicated, encrypted environment. They're never mixed with other customers' data and never used to train public models.</p>
                 </div>
-                <div class="industry-card">
-                    <h3>🏭 Industrial Distributors</h3>
-                    <ul>
-                        <li>Motor specifications & replacements</li>
-                        <li>Bearing cross-references</li>
-                        <li>Hydraulic component specs</li>
-                        <li>Obsolete machinery parts</li>
-                    </ul>
+                <div class="trust-card">
+                    <div class="trust-icon">🇬🇧</div>
+                    <h3>UK Data Sovereignty</h3>
+                    <p>All data processing happens on UK/EU servers. Your information never leaves British jurisdiction. Full GDPR compliance from day one.</p>
                 </div>
-                <div class="industry-card">
-                    <h3>❄️ HVAC Suppliers</h3>
-                    <ul>
-                        <li>Pump voltage & flow rates</li>
-                        <li>Boiler part numbers</li>
-                        <li>Refrigerant compatibility</li>
-                        <li>Discontinued system components</li>
-                    </ul>
+                <div class="trust-card">
+                    <div class="trust-icon">👥</div>
+                    <h3>Access Control</h3>
+                    <p>Role-based permissions ensure only authorized team members can access specific documents. Full audit logs track every search and access.</p>
+                </div>
+                <div class="trust-card">
+                    <div class="trust-icon">🛡️</div>
+                    <h3>Enterprise Security</h3>
+                    <p>Bank-level encryption, SOC 2 Type II certified infrastructure, and regular penetration testing. Your data is protected like it should be.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Locations Section -->
-    <section class="locations" id="locations">
+    <!-- CTA Section -->
+    <section class="cta-section" id="cta">
         <div class="container">
-            <h2 class="section-title">Local Service, UK Data</h2>
-            <p class="section-subtitle">On-site setup available across Essex and London</p>
-            <div class="locations-grid">
-                <div class="location-card">
-                    <h3>📍 Essex Coverage</h3>
-                    <p><strong>Serving:</strong> Chelmsford, Colchester, Basildon, Harlow, Southend-on-Sea, Braintree, Brentwood, and all surrounding industrial estates. On-site training included.</p>
-                </div>
-                <div class="location-card">
-                    <h3>📍 London Coverage</h3>
-                    <p><strong>Serving:</strong> Greater London, Park Royal, Enfield, Croydon industrial areas. Same-day support for enterprise accounts. We speak your language—no corporate waffle.</p>
-                </div>
-                <div class="location-card">
-                    <h3>🇬🇧 UK Data Hosting</h3>
-                    <p><strong>Your data never leaves the UK.</strong> Processed on UK/EU servers. GDPR compliant. No American cloud services. Your competitors can't see your catalogs or pricing.</p>
-                </div>
-            </div>
+            <h2>Ready to Stop Searching and Start Finding?</h2>
+            <p>Try RagStackAI with your own documents. Free demo. No credit card required.</p>
+            <a href="#demo" class="btn btn-primary">Upload a Document Now</a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">See It In Action</h2>
-            <p class="section-subtitle">15-minute demo with your actual catalogs. No sales pitch.</p>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="name">Your Name *</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>RagStackAI</h3>
+                <p>The secure knowledge engine for businesses that value efficiency and data privacy.</p>
+                <p style="margin-top: 1rem;">🇬🇧 UK Based<br>🔒 GDPR Compliant<br>⚡ Enterprise Ready</p>
+            </div>
+            <div class="footer-section">
+                <h3>Industries</h3>
+                <a href="#industries">Maintenance & Repair</a>
+                <a href="#industries">Compliance & Legal</a>
+                <a href="#industries">Public Records</a>
+                <a href="#industries">View All Solutions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <a href="#about">About Us</a>
+                <a href="#security">Security & Privacy</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>📧 hello@ragstackai.co.uk</p>
+                <p>📞 +44 20 3987 6543</p>
+                <p>📍 Essex & London</p>
+                <p style="margin-top: 1rem;">Mon-Fri: 9am - 6pm GMT</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RagStackAI. All rights reserved. | Privacy Policy | Terms of Service | Data Processing Agreement</p>
+        </div>
+    </footer>
+
+    <script>
+        // Industry Switcher
+        function switchIndustry(industry) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.industry-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.industry-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Add active class to selected tab and content
+            event.target.classList.add('active');
+            document.getElementById(industry).classList.add('active');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links
